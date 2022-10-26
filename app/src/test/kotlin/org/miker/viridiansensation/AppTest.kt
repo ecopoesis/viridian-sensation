@@ -15,9 +15,9 @@ class AppTest {
 
     @Test
     fun `jackson none`() {
-        val post = Post(1, 1, "foo", "bar", "baz", None)
-        val json = postLens(post, Request(GET, "/"))
-        val deserialized = postLens(json)
+        val post = Comment(1, 1, "foo", "bar", "baz", None)
+        val json = commentLens(post, Request(GET, "/"))
+        val deserialized = commentLens(json)
         deserialized shouldBe post
     }
 }
